@@ -1,0 +1,90 @@
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/*顶部栏常驻*/
+.nav-fixed #nav {
+  transform: translateY(58px) !important;
+  -webkit-transform: translateY(58px) !important;
+  -moz-transform: translateY(58px) !important;
+  -ms-transform: translateY(58px) !important;
+  -o-transform: translateY(58px) !important;
+}
+#nav {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/*所有页面实现毛玻璃特效*/
+#aside-content {
+  background: rgba(255, 255, 255, 0);
+}
+
+#aside-content > .card-widget:first-child {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+#aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.layout > div:first-child:not(.recent-posts) {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+#recent-posts > .recent-post-item {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+/*标题栏*/
+#page-header.nav-visible #nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(50px);
+}
+
+/*搜索框美化*/
+.search-dialog {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 0px;
+}
+
+#search-mask {
+  background: rgba(255, 255, 255, 0);
+}
+
+/*手机端毛玻璃优化*/
+#sidebar #sidebar-menus.open {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+#sidebar #menu-mask {
+  background: rgba(255, 255, 255, 0);
+}
